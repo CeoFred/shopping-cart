@@ -40,18 +40,21 @@ this.setState({persons:[
 ]})
 }
   render() {
-      const style ={
-          backgroundColor : 'White',
-          font: 'inherit',
-          border:'1px solid blue',
-          padding: '8px',
-          cursor:'Pointer',
-          align:'center'
-      };
+    //   const style ={
+    //       font: 'inherit',
+    //       border:'1px solid blue',
+    //       padding: '8px',
+    //       cursor:'Pointer',
+    //       align:'center',
+    //       fontFamily: 'Lucida Sans Regular',
+    //       borderRadius:'10px';
+
+    //   };
     return (
       <div className="App">
+
     <h1>Hello I am  a React App!Working with
-    States anad Props</h1>
+    States and Props</h1>
 <Person name={this.state.persons[0].name}
  age={this.state.persons[0].age}/>
 
@@ -63,11 +66,12 @@ click={this.swithNameHandler.bind(this,'Alfred!')}/>
  age={this.state.persons[2].age}
  changed={this.changeName}/>
 <h1>
-<Test Name="Alfred" work="code"/>
+<Test className="test" Name="Alfred" work="code"/>
 </h1>
  <Person name="Tom" age="50">Yeah Baby!
  <br/>
- <button style={style} onClick={this.swithNameHandler.bind(this,'Alfred')}>Switch Name</button>
+ <button 
+  onClick={this.swithNameHandler.bind(this,'Alfred')}>Switch Name</button>
 
  </Person>
        </div>

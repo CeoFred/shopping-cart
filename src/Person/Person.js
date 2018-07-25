@@ -27,6 +27,9 @@ return (
     <p>{props.children}</p>
     <input type="text" onChange={props.changed}
      value={props.name}/>
+     <br/>
+     <input type="text" onChange={props.change} />
+
     </div>
 )
 }
