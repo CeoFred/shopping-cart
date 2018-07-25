@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Person from './Person/Person';
+import Test from './Person/Test';
 import './App.css';
 import './Person/Person.css';
+
 class App extends Component {
 state = {
     persons: [
@@ -10,6 +12,12 @@ state = {
         {name: 'Tom',age:30}
     ]
 }
+
+
+
+
+
+
 swithNameHandler = (newName) =>{
   //  console.log('Was Clicked')
 
@@ -26,8 +34,9 @@ changeName = (event) =>{
 this.setState({persons:[
 
     {name: 'Fred',age:10},
-    {name: 'Ozioma',age:38},
+    {name: event.target.value,age:38},
     {name: event.target.value,age:60}
+
 ]})
 }
   render() {
@@ -36,21 +45,26 @@ this.setState({persons:[
           font: 'inherit',
           border:'1px solid blue',
           padding: '8px',
-          cursor:
-'Pointer',align:'center'
+          cursor:'Pointer',
+          align:'center'
       };
     return (
       <div className="App">
-    <h1>Hello I am  a React App!Working with States anad Props</h1>
-<Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
+    <h1>Hello I am  a React App!Working with
+    States anad Props</h1>
+<Person name={this.state.persons[0].name}
+ age={this.state.persons[0].age}/>
 
-<Person name={this.state.persons[1].name} age={this.state.persons[1].age}
+<Person name={this.state.persons[1].name}
+age={this.state.persons[1].age}
 click={this.swithNameHandler.bind(this,'Alfred!')}/>
 
-<Person name={this.state.persons[2].name} age={this.state.persons[2].age}
+<Person name={this.state.persons[2].name}
+ age={this.state.persons[2].age}
  changed={this.changeName}/>
-
-
+<h1>
+<Test Name="Alfred" work="code"/>
+</h1>
  <Person name="Tom" age="50">Yeah Baby!
  <br/>
  <button style={style} onClick={this.swithNameHandler.bind(this,'Alfred')}>Switch Name</button>
