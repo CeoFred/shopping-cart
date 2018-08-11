@@ -1,5 +1,5 @@
 div h1{
-background-color: lightgreen;
+background-color: goldenrod;
 margin-top: 0%;
 padding:1em;
 text-align: center;
@@ -21,8 +21,8 @@ button{
     padding: 8px;
     cursor:Pointer;
     align:center;
-       border-radius:8px;
-color: aqua;
+    border-radius:8px;
+    color: aqua;
 background-color: chocolate;
 
 }
