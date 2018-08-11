@@ -3,56 +3,40 @@ import "bootstrap/css/bootstrap.css";
 
 
 class Counter extends Component {
-    state = {
-        count: 0
-         };
-        //  constructor(){
-        //      super();
-        //    this.handleIncrement =  this.handleIncrement.bind(this);
-        //  }
-
-validate = () =>{
-
-  return  this.state.count > 10  ? <h6 className="alert alert-danger"> Number is Big sha</h6> :
-   <h6 className="alert alert-success">Number is too small</h6>;
-}
-
-         handleIncrement = () => {
-          this.setState({ count: this.state.count + 1});
-         }
-    handledecre = () => {
-        this.setState({ count: this.state.count - 1 });
-    }
     render() {
         return (
+
             <div>
-            <span  className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                <div className="container">
+
+                <div className="row">
+<div className="col">
+<img src={this.props.counter.img} alt={this.props.counter.name}/>
+<br/>
+{/* <span  className={this.getBadgeClasses()}>{this.formatCount()}</span> */}
+
+                <button className="btn btn-danger btn-sm"
+            onClick={() => this.props.onDelete(this.props.counter.id)}>Remove</button>
             <button
-            onClick={this.handleIncrement} className="btn btn-secondary btn-sm">
-                + Add
+            onClick={() => this.props.onIncrement(this.props.counter)} className="btn btn-secondary btn-sm">
+             Add To cart
             </button>
-                <button
-                    onClick={this.handledecre} className="btn btn-warning btn-sm">
-                    - Subtract
-            </button>
+                </div>
 
-{/* // calls a function to check if the count is zero or more than 10 and returns an output */}
-            <span>
-                {this.validate()}
-            </span>
-
-            </div>
+</div>
+                    </div>
+ </div>
          );
     }
     getBadgeClasses() {
         let color = "badge m-2 badge-";
-        color += this.state.count === 0 ? "danger" : "primary";
+        color += this.props.counter.value === 0 ? "danger" : "primary";
         return color;
     }
 
     formatCount(){
-        const {count} = this.state;
-         return count === 0 ? <h3>0</h3>: count
+        const {value} = this.props.counter;
+         return value === 0 ? <h3>0</h3>: value
     }
 }
 

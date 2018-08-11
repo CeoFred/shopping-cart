@@ -9,13 +9,27 @@ import phone5 from '../img/1(16).jpg';
 import Navbar from './navbar';
 class List extends Component {
     state = {
-        count: 0
+cart :[],
+        count:0,
+        phonearray: [{
+            id:1,
+            name:'Lenevo',
+        },{id:2,
+            name: 'Samsung Galaxy'
+        }]
          };
 
-        //  constructor(){
-        //      super();
-        //    this.handleIncrement =  this.handleIncrement.bind(this);
-        //  }
+        //   constructor(){
+        //  super();
+
+        // }
+//         addtocart = ($id) =>{
+//             if($id.inArray(this.state.cart)){
+// console.log('already exist')
+//             }else{
+//                 console.log('not in cart array')
+//             }
+//         }
 
 validate = () =>{
 
@@ -40,11 +54,12 @@ validate = () =>{
 <div className="col-md-3">
 <div className="card">
 
-<img className="card-img-top" src={phone2} alt="Card image cap"/>
+<img className="card-img-top" src={phone2} alt="Cardimageap"/>
   <div className="card-body">
-  <h5 className="card-title">Lenovo ES-7</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <button className="btn btn-primary" onClick={this.handleIncrement}>Add to Cart</button>
+  <h5 className="card-title">{this.state.phonearray[0].name}</h5>
+    <p className="card-text">Some quick example text to build on the card title and
+     make up the bulk of the card's content.</p>
+    <button className="btn btn-primary" id={this.state.phonearray[0].id} >Add to Cart</button>
     <a className="btn btn-outline-secondary">View</a>
   </div>
 </div>
@@ -52,11 +67,11 @@ validate = () =>{
 <div className="col-md-3">
 <div className="card">
 
-<img className="card-img-top" src={phone3} alt="Card image cap"/>
+<img className="card-img-top" src={phone3} alt="Cardap"/>
   <div className="card-body">
-  <h5 className="card-title">Samsung Galaxy-s9</h5>
+  <h5 className="card-title">{this.state.phonearray[1].name}</h5>
     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <button className="btn btn-primary" onClick={this.handleIncrement}>Add to Cart</button>
+    <button className="btn btn-primary" id={this.state.phonearray[1].id} onClick={this.handleIncrement}>Add to Cart</button>
     <a className="btn btn-outline-secondary">View</a>
   </div>
 </div>
@@ -65,7 +80,7 @@ validate = () =>{
 <div className="col-md-3">
 <div className="card">
 
-<img className="card-img-top" src={phone5} alt="Card image cap"/>
+<img className="card-img-top" src={phone5} alt="Cardimageap"/>
   <div className="card-body">
   <h5 className="card-title">Ear Piece</h5>
     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -78,7 +93,7 @@ validate = () =>{
 <div className="col-md-3">
 <div className="card">
 
-<img className="card-img-top" src={phone4} alt="Card image cap"/>
+<img className="card-img-top" src={phone4} alt="Cardimagecap"/>
   <div className="card-body">
   <h5 className="card-title">Infinix</h5>
     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
