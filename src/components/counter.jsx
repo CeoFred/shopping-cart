@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "bootstrap/css/bootstrap.css";
 
 
 class Counter extends Component {
@@ -14,11 +13,11 @@ class Counter extends Component {
 <img src={this.props.counter.img} alt={this.props.counter.name}/>
 <br/>
 {/* <span  className={this.getBadgeClasses()}>{this.formatCount()}</span> */}
-
+<span className="badge badge-primary">{this.props.counter.quantity}</span>
                 <button className="btn btn-danger btn-sm"
             onClick={() => this.props.onDelete(this.props.counter.id)}>Remove</button>
             <button
-            onClick={() => this.props.onIncrement(this.props.counter)} className="btn btn-secondary btn-sm">
+  onClick={() => this.props.onIncrement(this.props.counter)} className="btn btn-secondary btn-sm">
              Add To cart
             </button>
                 </div>

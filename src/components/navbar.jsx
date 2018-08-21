@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import "bootstrap/css/bootstrap.css";
-
 // import List from './list';
 // stateless functional components
 const Nabar = (props) => {

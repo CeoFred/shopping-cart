@@ -8,7 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import Counters from './components/counters';
 
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // ReactDOM.render(<Form />, document.getElementById("form"));
 // registerServiceWorker();
